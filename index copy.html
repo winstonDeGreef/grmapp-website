@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Ready For GraphMate</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(to right, hsl(200deg 100% 80%), hsl(140deg 100% 80%));
+            --text-width: min(30rem, 100vw - 2rem);
+        }
+
+
+        #title {
+
+        }
+
+        #product {
+            height: min(60vw, 80vh, 45rem);
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin-left: 2rem;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            width: 100vw;
+            /* height: 100vh; */
+            flex-direction: row;
+            /* justify-content: space-between; */
+            padding: 3rem;
+            box-sizing: border-box;
+            max-width: 60rem;
+        }
+
+        #text {
+            width: var(--text-width);
+            padding-top: 3rem;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        #email {
+            width: 100%;;
+            height: 3rem;
+            border: 1px solid grey;
+            border-radius: 0.5rem;
+            display: flex;
+            /* overflow: hidden; */
+        }
+
+        #email input {
+            flex-grow: 1;
+            border: none;
+            /* border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem; */
+            font-size: 1.5rem;
+            padding: 0.25rem;
+            box-sizing: border-box;
+            width: 10px;
+            /* background: hsl(200deg 100% 80%); */
+            border-right: 1px solid grey;
+            background: transparent;
+
+        }
+
+        #email button {
+            border: none;
+            /* background: hsl(140deg 100% 80%); */
+            background: transparent;
+            /* border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem; */
+            font-weight: bold;
+
+        }
+
+        @media (max-width: 45rem) {
+            #container {
+                display: block;
+            }
+            main {
+                display: block;
+                padding: 0.5rem;
+                margin: 0 auto;
+                width: var(--text-width);
+            }
+
+            #text {
+                width: 100%;
+            }
+
+            #email {
+                flex-direction: column;
+                height: 6rem;
+                margin-bottom: 1em;
+            }
+
+            #email input {
+                /* height: 3rem; */
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid grey;
+
+            }
+
+            #email button {
+                width: 100%;
+                height: 3rem;
+            }
+
+            #product {
+                width: min(100%, 20rem);
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <main>
+            <div id="text">
+                <h1 id="title">Introducing the GraphMate</h1>
+                <p>GraphMate revolutionizes graphing calculators with a modern touch screen, a powerful processor, and the best features of Desmos in a secure and intuitive device that will be able to be used in tests.
+                </p>
+                <p>
+                    <strong>The GraphMate isn't available yet, but you can sign up to be notified when it is.</strong>
+                </p>
+                <div id="email">
+                    <input placeholder="your email-address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <img src="product.png" id="product">
+        </main>
+
+    </div>
+</body>
+</html>
